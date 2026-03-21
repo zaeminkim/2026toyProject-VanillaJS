@@ -50,6 +50,7 @@ function initBattery() {
         );
       }
     };
+    // 배터리 정보 가져오기
     updateBattery();
     batt.addEventListener("chargingchange", () => {
       updateBattery();
