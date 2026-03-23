@@ -80,6 +80,95 @@
 
     <div class="faq">
       <h2>Frequently Asked Questions</h2>
+      <ul class="accordion">
+        <li>
+          <!-- input 태그와 label태그의 id, for는 서로 일치해야 한다 -->
+          <input type="radio" name="accordion" id="first" />
+          <label for="first">What is Netflix?</label>
+          <div class="content">
+            <p>sample text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="second" />
+          <label for="second">How much does Netflix cost?</label>
+          <div class="content">
+            <p>sample text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="third" />
+          <label for="third">Where can I watch?</label>
+          <div class="content">
+            <p>sample text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fourth" />
+          <label for="fourth">How do I cancel?</label>
+          <div class="content">
+            <p>sample text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fifth" />
+          <label for="fitfh">What can I watch on Netflix?</label>
+          <div class="content">
+            <p>sample text</p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="sixth" />
+          <label for="sixth">Is Netflix good for kids?</label>
+          <div class="content">
+            <p>sample text</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- 작은 글씨로 텍스트 삽입하기 -->
+      <small
+        >Ready to watch? Enter your email to create or restart your
+        membership</small
+      >
+      <form class="email-signup">
+        <input type="email" placeholder="Email address" required />
+        <button type="submit">Get Started</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <h2>Questions? call 000-000-000-000</h2>
+
+      <div class="row">
+        <div class="col">
+          <a href="#">FAQ</a>
+          <a href="#">Investor Relations</a>
+          <a href="#">Privacy</a>
+          <a href="#">Speed Test</a>
+        </div>
+        <div class="col">
+          <a href="#">Help Center</a>
+          <a href="#">Jobs</a>
+          <a href="#">Cookies Preferences</a>
+          <a href="#">Legal Notices</a>
+        </div>
+        <div class="col">
+          <a href="#">Account</a>
+          <a href="#">Ways to watch</a>
+          <a href="#">Corporate Information</a>
+          <a href="#">Only on Netflix</a>
+        </div>
+        <div class="col">
+          <a href="#">Media Centre</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      <button class="language-btn">
+        English<img src="netflix-img/images/down-icon.png" />
+      </button>
+      <p class="copyright-txt">Netflix UK</p>
     </div>
   </body>
 </html>
