@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  /* margin: 10px 100px; */
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* 요소들 사이에 균일한 간격을 만들어준다 */
+  justify-content: space-between;
+}
+
+/* .logo 클래스를 가진 img 태그의 스타일 */
+header img.logo {
+  width: 70px;
+  cursor: pointer;
+}
+
+header button.download-btn {
+  background-color: #ec702e;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+header nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main {
+  display: grid;
+  width: 100%;
+}
+
+.current-location {
+  display: flex;
+}
+
+.current-location p {
+  background: #3a3d45;
+  border-radius: 999px;
+  padding: 10px 20px;
+}
+
+.main #search {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  position: relative;
+  border: #3a3d45 1px solid;
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+
+form {
+  /* 이를 위해서는 부모요소의 width를 100%로 지정해야 함 */
+  width: 100%;
+  /* 검색창의 요소들 중앙 정렬시키기 */
+  display: flex;
+  align-items: center;
+}
+
+form input {
+  /* width: 90%;와 같은 고정수치 대신 사용하기*/
+  /* Label과 Img가 쓰고 남은 공간 전부 사용하라는 뜻 
+  이를 위해서는 부모요소의 width를 100%로 지정해야 함*/
+  flex: 1;
+
+  padding: 5px 10px;
+  border: 0;
+  background: transparent;
+  margin: 0 10px;
+  color: #fff;
+}
+
+form label {
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+form .arrow-down {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  width: 25px;
+}
+
+form .search-arrow {
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+}
+
+.popular-items {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+  white-space: nowrap;
+  left: 5px;
+}
+
+.popular-items h4 {
+  color: #99999a;
+  font-weight: 600;
+}
+
+.popular-items p {
+  color: #cecece;
+}
+
+.title {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.title h3 {
+  font-size: 25px;
+}
+
+#main-content {
+  display:grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.filter-menu {
+  font-weight: 600;
+}
+
+#item-board {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 100%;
+  max-width: 1000px;
+}
+
+#item-board .item-card a {
+  text-decoration: none;
+  color:#fff;
+}

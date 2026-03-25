@@ -3,12 +3,260 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="style.css" href="buy-sell.css" />
+    <link rel="stylesheet" href="buy-sell.css" />
     <title>당근 구매 페이지</title>
   </head>
   <body>
-    <header></header>
-    <div class="main"></div>
+    <header>
+      <img src="images/daangn-icon.png" class="logo" />
+      <nav>
+        <a href="#">중고거래</a>
+        <a href="#">부동산</a>
+        <a href="#">중고차</a>
+        <a href="#">알바/과외/레슨</a>
+        <a href="#">동네업체</a>
+        <a href="#">동네생활</a>
+        <a href="#">모임</a>
+        <a href="#">카페</a>
+      </nav>
+      <button class="download-btn">앱 다운로드</button>
+    </header>
+    <div class="main">
+      <div class="current-location">
+        <p>상도동</p>
+        <img src="" alt="" />
+      </div>
+      <section id="search">
+        <form class="search-items">
+          <label for="item">중고거래</label
+          ><img
+            src="images/arrow-down.png"
+            alt="down arrow"
+            class="arrow-down"
+          />
+          <input type="text" id="item" placeholder="검색어를 입력해주세요" />
+          <img
+            src="images/search-arrow.png"
+            alt="search arrow"
+            class="search-arrow"
+          />
+        </form>
+      </section>
+      <div class="popular-items">
+        <h4>인기 검색어</h4>
+        <p>노트북</p>
+        <p>원룸</p>
+        <p>현대 자동차</p>
+        <p>이사짐 알바</p>
+        <p>배트민턴 모임</p>
+        <p>근처 맛집</p>
+        <p>닌텐도</p>
+        <p>에어컨</p>
+        <p>아이폰</p>
+        <p>자전거</p>
+        <p>과외</p>
+        <p>플스</p>
+      </div>
+
+      <div class="title">
+        <p>홈 > 중고거래</p>
+        <h3>서울특별시 동작구 봉천동 중고거래</h3>
+      </div>
+
+      <div id="main-content">
+        <div class="filter-menu">
+          <h3>필터</h3>
+          <a href="#">초기화</a>
+          <div class="location">
+            <div class="filter-head">위치</div>
+            <p>서울특별시 동작구</p>
+            <ul class="check-list">
+              <li>
+                <input type="checkbox" id="check1" />
+                <label for="check1">상도동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check2" />
+                <label for="check2">사당동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check3" />
+                <label for="check3">대방동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check4" />
+                <label for="check4">흑석동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check5" />
+                <label for="check5">노량진동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check6" />
+                <label for="check6">신대방동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check7" />
+                <label for="check7">신림동</label>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <div class="filter-head">카테고리</div>
+            <ul class="check-list">
+              <li>
+                <input type="checkbox" id="check1" />
+                <label for="check1">디지털기기</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check2" />
+                <label for="check2">생활가전</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check3" />
+                <label for="check3">가구/인테리어</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check4" />
+                <label for="check4">생활/주방</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check5" />
+                <label for="check5">유아동</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check6" />
+                <label for="check6">유아도서</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check7" />
+                <label for="check7">뷰티/미용</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check8" />
+                <label for="check8">스포츠/레저</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check9" />
+                <label for="check9">취미/게임/음반</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check10" />
+                <label for="check10">도서</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check11" />
+                <label for="check11">티켓/교환권</label>
+              </li>
+              <li>
+                <input type="checkbox" id="check12" />
+                <label for="check12">e쿠폰</label>
+              </li>
+            </ul>
+          </div>
+          <div class="price">
+            <div class="filter-head">가격</div>
+            <ul class="check-list">
+              <li>
+                <a href="#">나눔</a>
+              </li>
+              <li>
+                <a href="#">5,000원 이하</a>
+              </li>
+              <li>
+                <a href="#">10,000원 이하</a>
+              </li>
+              <li>
+                <a href="#">20,000원 이하</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section id="item-board">
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img1" /></div>
+              <div class="card-desc">
+                <div class="item-name">나이키조던미드1키즈 170</div>
+                <div class="item-price">26,000원</div>
+              </div>
+              <div class="loca-time">상도동 49분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img2" /></div>
+              <div class="card-desc">
+                <div class="item-name">오니츠카타이거MHS</div>
+                <div class="item-price">130,000원</div>
+              </div>
+              <div class="loca-time">상도동 49분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img3" /></div>
+              <div class="card-desc">
+                <div class="item-name">멕시코시 카브리오픽스 바구니형</div>
+                <div class="item-price">19,000원</div>
+              </div>
+              <div class="loca-time">상도동 51분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img4" /></div>
+              <div class="card-desc">
+                <div class="item-name">타이니러브 모빌</div>
+                <div class="item-price">100,000원</div>
+              </div>
+              <div class="loca-time">상도동 51분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img1" /></div>
+              <div class="card-desc">
+                <div class="item-name">나이키조던미드1키즈 170</div>
+                <div class="item-price">26,000원</div>
+              </div>
+              <div class="loca-time">상도동 49분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img2" /></div>
+              <div class="card-desc">
+                <div class="item-name">오니츠카타이거MHS</div>
+                <div class="item-price">130,000원</div>
+              </div>
+              <div class="loca-time">상도동 49분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img3" /></div>
+              <div class="card-desc">
+                <div class="item-name">멕시코시 카브리오픽스 바구니형</div>
+                <div class="item-price">19,000원</div>
+              </div>
+              <div class="loca-time">상도동 51분 전</div>
+            </a>
+          </div>
+          <div class="item-card">
+            <a href="#">
+              <div class="card-img"><img src="" alt="img4" /></div>
+              <div class="card-desc">
+                <div class="item-name">타이니러브 모빌</div>
+                <div class="item-price">100,000원</div>
+              </div>
+              <div class="loca-time">상도동 51분 전</div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <footer></footer>
 
     <script src="buy-sell.js"></script>
