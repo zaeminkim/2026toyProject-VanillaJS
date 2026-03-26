@@ -22,26 +22,28 @@
       <button class="download-btn">앱 다운로드</button>
     </header>
     <div class="main">
-      <div class="current-location">
-        <p>상도동</p>
-        <img src="" alt="" />
+      <div class="search-container">
+        <div class="current-location">
+          <img src="images/gps-img.png" alt="gps-img" />
+          <p>상도동</p>
+        </div>
+        <section id="search">
+          <form class="search-items">
+            <label for="item">중고거래</label
+            ><img
+              src="images/arrow-down.png"
+              alt="down arrow"
+              class="arrow-down"
+            />
+            <input type="text" id="item" placeholder="검색어를 입력해주세요" />
+            <img
+              src="images/search-arrow.png"
+              alt="search arrow"
+              class="search-arrow"
+            />
+          </form>
+        </section>
       </div>
-      <section id="search">
-        <form class="search-items">
-          <label for="item">중고거래</label
-          ><img
-            src="images/arrow-down.png"
-            alt="down arrow"
-            class="arrow-down"
-          />
-          <input type="text" id="item" placeholder="검색어를 입력해주세요" />
-          <img
-            src="images/search-arrow.png"
-            alt="search arrow"
-            class="search-arrow"
-          />
-        </form>
-      </section>
       <div class="popular-items">
         <h4>인기 검색어</h4>
         <p>노트북</p>
@@ -67,6 +69,10 @@
         <div class="filter-menu">
           <h3>필터</h3>
           <a href="#">초기화</a>
+          <div class="available">
+            <input type="checkbox" id="check0" />
+            <label for="check0">거래 가능만 보기</label>
+          </div>
           <div class="location">
             <div class="filter-head">위치</div>
             <p>서울특별시 동작구</p>
@@ -170,12 +176,20 @@
                 <a href="#">20,000원 이하</a>
               </li>
             </ul>
+            <div class="price-range">
+              <input type="text" placeholder="0" />
+              -
+              <input type="text" placeholder="최대" />
+            </div>
+            <a href="#">적용하기</a>
           </div>
         </div>
         <section id="item-board">
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img1" /></div>
+              <div class="card-img">
+                <img src="images/item-img1.png" alt="img1" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">나이키조던미드1키즈 170</div>
                 <div class="item-price">26,000원</div>
@@ -185,7 +199,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img2" /></div>
+              <div class="card-img">
+                <img src="images/item-img2.png" alt="img2" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">오니츠카타이거MHS</div>
                 <div class="item-price">130,000원</div>
@@ -195,7 +211,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img3" /></div>
+              <div class="card-img">
+                <img src="images/item-img3.png" alt="img3" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">멕시코시 카브리오픽스 바구니형</div>
                 <div class="item-price">19,000원</div>
@@ -205,7 +223,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img4" /></div>
+              <div class="card-img">
+                <img src="images/item-img4.png" alt="img4" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">타이니러브 모빌</div>
                 <div class="item-price">100,000원</div>
@@ -215,7 +235,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img1" /></div>
+              <div class="card-img">
+                <img src="images/item-img5.png" alt="img5" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">나이키조던미드1키즈 170</div>
                 <div class="item-price">26,000원</div>
@@ -225,7 +247,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img2" /></div>
+              <div class="card-img">
+                <img src="images/item-img6.png" alt="img6" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">오니츠카타이거MHS</div>
                 <div class="item-price">130,000원</div>
@@ -235,7 +259,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img3" /></div>
+              <div class="card-img">
+                <img src="images/item-img7.png" alt="img7" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">멕시코시 카브리오픽스 바구니형</div>
                 <div class="item-price">19,000원</div>
@@ -245,7 +271,9 @@
           </div>
           <div class="item-card">
             <a href="#">
-              <div class="card-img"><img src="" alt="img4" /></div>
+              <div class="card-img">
+                <img src="images/item-img8.png" alt="img8" />
+              </div>
               <div class="card-desc">
                 <div class="item-name">타이니러브 모빌</div>
                 <div class="item-price">100,000원</div>
