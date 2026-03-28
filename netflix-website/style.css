@@ -72,6 +72,8 @@ nav button {
 
 .header-content {
   /* 부모요소의 relative를 기준으로 배치 */
+  /* 요소를 문서 흐름에서 완전히 제외시킴 (붕 떠있는 듯하게) */
+  /* 다른 요소들은 마치 이 요소가 없는 것처럼 흐름에 따라 배치됨 */
   position: absolute;
 
   /* 화면 정중앙에 오도록 하기 */
@@ -86,7 +88,7 @@ nav button {
 
 .header-content h1 {
   font-size: 60px;
-  /* 글자 간격 조절하기 */
+  /* 글자 줄 간격 조절하기 */
   line-height: 70px;
   font-weight: 600;
   /* 최대 길이 지정해서 그 이상으로 늘어나지 않도록 */
@@ -126,6 +128,7 @@ nav button {
 
 /* --------------- features --------------- */
 .features {
+  /* features 클래스의 컨텐트 너비를 padding값으로 결정하기 */
   padding: 50px 12%;
   font-size: 22px;
 }
@@ -166,6 +169,7 @@ nav button {
 
 /* --------------- faq --------------- */
 .faq {
+  /* padding값 설정을 통해 자식요소인 .accordion의 너비를 결정 */
   padding: 10px 20%;
   text-align: center;
   font-size: 18px;
@@ -204,6 +208,9 @@ nav button {
 label::after {
   content: "+";
   font-size: 34px;
+  /* 만약 absolute로 문서 흐름에서 빼지 않았다면, 
+  + 기호는 글자 바로 옆에 찰싹 달라붙어 있거나 
+  글자 길이에 따라 위치가 들쭉날쭉 변했을 것 */
   position: absolute;
   /* 오른쪽에서 20px 떨어진 위치 */
   right: 20px;
@@ -325,7 +332,7 @@ input[type="radio"] {
   }
 
   .header-content {
-    /*  */
+    /* 속성: unset; = 이 속성에 설정했던 값을 지우고, 자연스러운 원래 상태로 되돌리겠다 */
     position: unset;
     transform: none;
     padding-top: 150px;
@@ -343,6 +350,7 @@ input[type="radio"] {
   .text-col,
   .img-col {
     /* full width를 사용하도록 설정한다 */
+    /* 레이아웃을 2단에서 위아래로 쌓이는 1단으로 변경한다.  */
     flex-basis: 100%;
   }
 
