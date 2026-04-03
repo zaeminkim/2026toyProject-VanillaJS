@@ -141,9 +141,56 @@ main .main-info {
 main .content-feed .feed-main .main-info img {
   width: 50px;
 }
+main .content-feed .feed-main .main-info #comment,
+#save {
+  width: 30px;
+  margin: 10px;
+}
+main .content-feed .feed-main .main-info #save {
+  /* 부모요소에 남는 공간이 있을 때 자식요소에게  */
+  /* 왼쪽의 남는 공간을 모두 너의 마진(여백)으로 써라 라는 의미 */
+  margin-left: auto;
+
+  /* 비추천하는 방식 */
+  /* right: -100px; */
+}
 
 main .content-feed .feed-desc {
   justify-content: flex-start;
+}
+
+main .content-feed .text-content {
+  display: -webkit-box;
+  /* 최대로 보여주는 줄의 수 설정 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  /* 컨테이너의 넘친 부분의 글자를 ...으로 처리 */
+  /* 반드시 overflow: hidden;과 함께 쓰여야 함 */
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+/* '더 보기' 클릭 시 제한을 풀어줄 클래스 */
+/* text-content 클래스와 expanded 클래스를 동시에(같이) 가지고 있는 요소 */
+main .feed-desc .text-content.expanded {
+  display: block; /* 제한 해제 */
+  -webkit-line-clamp: unset;
+}
+
+/* '더 보기' 버튼 스타일 */
+main .feed-desc .more-content {
+  color: #a8a8a8;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+/* 숨김 처리용 클래스 */
+main .feed-desc .more-content.hidden {
+  display: none;
 }
 
 main .content-message {
