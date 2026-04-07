@@ -22,6 +22,10 @@ body {
 
   background-color: black;
   color: #e7e7e7;
+
+  /* height: 100vh을 안 쓴 이유
+  유연한 높이 = 컨텐츠가 적어도 화면을 꽉 채우되 
+  컨텐츠가 많아지면 늘어나겠다는 의미 */
   min-height: 100vh;
   line-height: 1.5;
 }
@@ -106,4 +110,126 @@ nav a:hover {
 .btn-signing:hover {
   background-color: white;
   /* 마우스 호버했을 때 효과 */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 최소높이 = 요소의 높이가 이 값보다 작아지지 않게 고정
+  컨텐츠가 많아지면 아래로 더 늘어날 수 있는 유연성을 제공 */
+  min-height: calc(90vh - 6rem);
+}
+
+.content {
+  /* 최대 너비 */
+  max-width: 40rem;
+  margin-left: 10%;
+  z-index: 999;
+}
+
+.tag-box {
+  position: relative;
+  width: 18rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  background: linear-gradient(
+    to right,
+    #656565,
+    #7f42a7,
+    #6600c5,
+    #5300a0,
+    #757575,
+    #656565
+  );
+  background-size: 200%;
+  animation: animationGradient 2.5s linear infinite;
+  /* 뿌연 연기 같은 효과 */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animationGradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.tag-box .tag {
+  /* 부모 박스(테두리가 될 박스) 바로 위에 
+  이 검은색 박스를 '스티커처럼' 정확히 겹쳐 올리기 위해서 */
+  position: absolute;
+
+  /* inset: top, right, bottom, left를 한번에 설정하는 속성
+  부모의 사방 끝부분에서 안쪽으로 3px씩 밀고 들어오라는 의미 */
+  inset: 3px 3px 3px 3px;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.tag-box .tag:hover {
+  color: #5300a0;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 2rem 0;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+
+.description {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  max-width: 35rem;
+  color: gray;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.btn-get-started {
+  text-decoration: none;
+  border: 1px solid #2a2a2a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: background-color 0.2s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #1a1a1a;
+}
+
+.btn-signing-main {
+  text-decoration: none;
+  background-color: lightgray;
+  color: black;
+  padding: 0.6rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: background-color 0.2s ease;
+}
+
+.btn-signing-main:hover {
+  background-color: gray;
+}
+
+.robot-3d {
+  position: absolute;
+  top: 0;
+  right: -20%;
 }
