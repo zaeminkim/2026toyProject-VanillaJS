@@ -53,51 +53,92 @@ main nav {
   left: 0;
   z-index: 100; /* 피드 이미지나 텍스트에 가려지지 않도록 맨 위로 띄움 */
 
-  /* 너비 설정하지 않아도 아이콘의 너비 만큼 늘어남 */
-  /* width: 5%; */
-
+  /* 너비 설정하지 않아도 아이콘의 너비 만큼 늘어남 
+  하지만 네비게이션 바 효과를 위해 다시 설정함 */
+  width: 75px;
+  
+  padding: 20px 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   /* nav를 3개로 분류하여 간격을 두고 배치하기 */
   justify-content: space-between;
+
   /* 아이콘들 중앙정렬하기 */
-  align-items: center;
+  /* align-items: center; */
+
+  /* 잘리는 부분 안보이게 하기 */
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+/* 호버했을 때 네비게이션 바 너비가 증가하도록 */
+main nav:hover {
+  width: 250px;
 }
 
 main .nav-icon {
-  margin-top: 20px;
+  margin: 20px;
   align-items: center;
 }
 
 main .nav-icon img {
-  width: 30px;
+  width: 35px;
   cursor: pointer;
+
+  /* 배경화면 자연스럽게 제거하기 */
+  background: transparent;
+  mix-blend-mode: lighten;
 }
 
-main .nav-item {
+main .nav-item,
+main .nav-more {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin: 20px 20px;
+  width: 90%;
+  margin: 10px 10px;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+main .nav-next {
+  font-size: 1rem;
+  background: transparent;
+  mix-blend-mode: lighten;
+
+  /* 줄 바꿈 X */
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* nav가 열렸을 때 글자 나타나게 하기 */
+main nav:hover .nav-next {
+  opacity: 1;
+}
+
+main .nav-item:hover,
+main .nav-more:hover {
+  background-color: #26282c;
 }
 
 main .nav-item img {
   width: 50px;
   cursor: pointer;
-}
-
-main .nav-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 20px 20px;
+  background: transparent;
+  mix-blend-mode: lighten;
 }
 
 main .nav-more img {
   width: 50px;
   cursor: pointer;
+  background: transparent;
+  mix-blend-mode: lighten;
 }
 
 main .content-feed {
@@ -140,6 +181,7 @@ main .main-info {
 
 main .content-feed .feed-main .main-info img {
   width: 50px;
+  cursor: pointer;
 }
 main .content-feed .feed-main .main-info #comment,
 #save {
@@ -208,6 +250,12 @@ main .content-message {
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+
+/* 마우스 호버 시 효과 */
+main .content-message .message:hover {
+  background-color: #26282c;
+  transition: all 0.2s ease;
 }
 
 main .content-message .message {
