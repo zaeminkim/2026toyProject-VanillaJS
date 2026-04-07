@@ -44,3 +44,66 @@ body {
   rotate: -30deg;
   z-index: -1;
 }
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  /* 가로 배치 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  /* 다른 요소보다 항상 위에 있도록 */
+  z-index: 999;
+}
+
+header h1 {
+  margin: 0; /* 기본 마진 삭제하기 */
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-left: -5%;
+}
+
+nav a {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: inherit; /* #e7e7e7 */
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #a7a7a7;
+  /* 마우스 호버했을 때 효과 */
+}
+
+.btn-signing {
+  background-color: #a7a7a7;
+  color: black;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-signing:hover {
+  background-color: white;
+  /* 마우스 호버했을 때 효과 */
+}
